@@ -597,7 +597,7 @@
             <span class="menu-line"></span>
             <span class="menu-line"></span>
         </button>
-        <h1>AI Chatbot by.fitree</h1>
+        <h1> COSMIX AI </h1>
         <div></div>
     </header>
 
@@ -699,7 +699,7 @@
             let messageTimestamps = [];
             
             // System Prompt
-            const SYSTEM_PROMPT = "คุณคือผู้ช่วย AI ชื่อ'cosmix'ผู้สร้างคุณคือ'fitree'ที่มีประโยชน์ พยายามตอบคำถามให้ชัดเจนและกระชับ ใช้ภาษาไทยที่ถูกต้องและเป็นธรรมชาติ";
+            const SYSTEM_PROMPT = "คุณคือผู้ช่วย AI ชื่อ cosmix ผู้สร้างคุณคือ fitree ที่มีประโยชน์ ใช้ภาษาไทยที่ถูกต้องและเป็นธรรมชาติ และ กระชับ ตรงประเดน";
 
             // Show notification on load
             function showNotification() {
@@ -709,13 +709,13 @@
                 }, 5000);
             }
 
-            // โหลด API Key จาก URL ภายนอก
+            
             async function loadAPIKey() {
                 try {
-                    // เปลี่ยน URL นี้เป็นลิงก์ที่เก็บ API Key ของคุณ
+                    
                     const API_KEY_URL = "https://pastebin.com/raw/BNGDxBE2";
                     
-                    // ใช้ CORS proxy เพื่อแก้ปัญหา CORS
+                    
                     const proxyUrl = "https://api.allorigins.win/raw?url=";
                     const response = await fetch(proxyUrl + encodeURIComponent(API_KEY_URL));
                     
@@ -726,15 +726,15 @@
                     
                     API_KEY = key.trim();
                 } catch (error) {
-                    console.error("โหลด API Key ไม่สำเร็จ:", error);
+                    console.error("โหลด โมเดล ai ไม่สำเร็จ:", error);
                     addMessage("⚠️ ระบบขัดข้องชั่วคราว กรุณาลองใหม่ภายหลัง", "bot");
                 }
             }
 
             // Initialize
             updateQueueDisplay();
-            await loadAPIKey(); // โหลด API Key เมื่อหน้าเว็บโหลดเสร็จ
-            showNotification(); // แสดงการแจ้งเตือนเมื่อโหลดหน้าเว็บ
+            await loadAPIKey();
+            showNotification();
 
             // Event Listeners
             menuBtn.addEventListener('click', toggleMenu);
